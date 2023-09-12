@@ -1,0 +1,108 @@
+MODULE FoodQuick
+
+    FUNCTION main()
+        Declare Scanner scanner
+        Declare List<Order> orderItems
+        
+        Prompt user for "Enter your order number:"
+        Read orderNumber from user
+        
+        Prompt user for "Enter your name:"
+        Read customerName from user
+        
+        Prompt user for "Enter your email:"
+        Read email from user
+        
+        Prompt user for "Enter your phone number:"
+        Read phone from user
+        
+        Prompt user for "Enter your address:"
+        Read address from user
+        
+        Prompt user for "Enter your location (city):"
+        Read customerLocation from user
+        
+        Initialise continueOrdering to "yes"
+        WHILE continueOrdering is "yes" DO
+            Display menu items
+            Read orderChoice from user
+            
+            Determine order and price based on orderChoice
+            
+            Prompt user for quantity of order
+            Read quantity from user
+            
+            ADD new Order(order, quantity, price) to orderItems
+            
+            Ask if user wants to add more orders
+            Read moreOrders from user
+            Set continueOrdering to moreOrders
+        END WHILE
+        
+        Prompt user for special instructions
+        Read instructions from user
+        
+        Create new Customer object
+        
+        Prompt user for restaurant details and create Restaurant object
+        
+        Declare List<Driver> drivers
+        Read drivers data from drivers.txt and populate drivers list
+        
+        Open file for writing invoice
+        Write customer details, order details, and total price to file
+        Determine the closest driver with least delivery load
+        IF suitable driver found THEN
+            Write driver details to file
+        ELSE
+            Write message about no available drivers to file
+        END IF
+        Close the file
+        
+    END FUNCTION
+
+    CLASS Order
+        Declare itemName, quantity, price
+        
+        FUNCTION Order(itemName, quantity, price)
+            Initialise itemName, quantity, price
+        END FUNCTION
+        
+        FUNCTION getItemName()
+            RETURN itemName
+        END FUNCTION
+        
+        FUNCTION getQuantity()
+            RETURN quantity
+        END FUNCTION
+        
+        FUNCTION getPrice()
+            RETURN price
+        END FUNCTION
+    END CLASS
+    
+    CLASS Customer
+        Declare orderNumber, customerName, phone, email, customerLocation, address
+        FUNCTION Customer(orderNumber, customerName, phone, email, customerLocation, address)
+            Initialise orderNumber, customerName, phone, email, customerLocation, address
+        END FUNCTION
+        // Getter methods for all attributes
+    END CLASS
+
+    CLASS Restaurant
+        Declare restaurantName, restaurantLocation, restaurantContactNumber
+        FUNCTION Restaurant(restaurantName, restaurantLocation, restaurantContactNumber)
+            Initialise restaurantName, restaurantLocation, restaurantContactNumber
+        END FUNCTION
+        // Getter methods for all attributes
+    END CLASS
+    
+    CLASS Driver
+        Declare driverName, driverLocation, driverDeliveryLoad
+        FUNCTION Driver(driverName, driverLocation, driverDeliveryLoad)
+            Initialise driverName, driverLocation, driverDeliveryLoad
+        END FUNCTION
+        // Getter methods for all attributes
+    END CLASS
+    
+END MODULE
