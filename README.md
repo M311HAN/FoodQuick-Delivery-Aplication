@@ -1,1 +1,1 @@
-# FoodQuick-Delivery-Aplication
+# CapstoneProject-FoodQuick-DeliveryApplication
