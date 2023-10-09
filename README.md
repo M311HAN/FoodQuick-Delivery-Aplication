@@ -1,4 +1,4 @@
-# CapstoneProject-FoodQuick-DeliveryApplication
+# FoodQuick-Delivery-Application
 
 ## Description
 
