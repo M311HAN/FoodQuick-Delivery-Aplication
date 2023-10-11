@@ -159,7 +159,7 @@ public class FoodQuick {
     // Method to load driver details from a file
     private static List<Driver> loadDriversFromFile() {
         List<Driver> drivers = new ArrayList<>();
-        try (Scanner driverScanner = new Scanner(new File("drivers.txt"))) {
+        try (Scanner driverScanner = new Scanner(new File("driver-info.txt"))) {
             while (driverScanner.hasNextLine()) {
                 String[] details = driverScanner.nextLine().split(", ");
                 String driverName = details[0];
@@ -171,7 +171,7 @@ public class FoodQuick {
                 drivers.add(new Driver(driverName, driverLocation, driverDeliveryLoad));
             }
         } catch (IOException e) {
-            System.out.println("Error reading drivers.txt file.");
+            System.out.println("Error reading driver-info.txt file.");
             e.printStackTrace();
         }
         return drivers;
