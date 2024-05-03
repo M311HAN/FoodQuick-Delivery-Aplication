@@ -10,7 +10,7 @@
 
 The "FoodQuick Delivery Application" is an advanced food delivery system designed to streamline the order and delivery process. This application is a capstone project that showcases the use of object-oriented programming principles, defensive programming with the incorporation of try-catch blocks, and efficient code structuring.
 
-For a detailed understanding of the program's structure and database layout, please view the [FoodQuick Diagram PDF](FoodQuick Diagram.pdf). It provides a visual representation of the relationships between the different sets of data.
+For a detailed understanding of the program's structure and database layout, please view the [FoodQuick Diagram PDF](FoodQuick%20Diagram.pdf). It provides a visual representation of the relationships between the different sets of data.
 
 ## Key Features 
 
